@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgenciaX - CPJavaScript</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Google fonts Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"/>
+    
+    <!-- Biblioteca Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" defer></script>
+    <!-- JavaScript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+    <!-- JavaScript do projeto -->
+    <script src="js/scripts.js" defer></script>
+    <script src="./map/script-map.js"defer></script>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+      <div class="container py-3">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/agenciax-icon.png" alt="AgenciaX" />
+          <span>AgenciaX</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-items"
+          aria-controls="navbar-items"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-items">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfólio</a>
+            </li>            
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="contact" href="contacto.html">Contacto</a>
+            </li>
+             <form class="d-flex" id="search-form">
+                    <i class="bi bi-search primary-color"></i>
+                    <input class="form-control me-2" type="search" placeholder="Encontre no site..."
+                        aria-label="Search">
+                    <button class="btn secondary-bg-color" id="btn-search" type="submit">Pesquisar</button>
+                </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+</br></br></br></br>
+<!-- CONTACTOS - MAPA -->  
+        <div class="container-fluid">
+        <div class="row">
+            <!-- Formulário -->
+            <div class="col-md-6">
+                <div class="contactos-container">
+                <h2>Fale conosco:</h2>
+                <form>
+                <div class="input-contactrow">
+
+                    <div class="label">
+                        Nome: 
+                    </div>
+                    <div class="input-contact">
+                        <input type="text" placeholder="Primeiro Nome" id="nome" required onchange="validarNome();">*
+                    </div>
+
+                </div>
+                <div class="input-contactrow">
+                    <div class="label">
+                        Apelido:
+                    </div>
+                    <div class="input-contact">
+                        <input type="text" placeholder="Ultimo nome" id="apelido" required
+                        onchange="validarApelido();">*
+                    </div>
+                </div>
+                <div class="input-contactrow">
+                    <div class="label">
+                        Telemóvel:
+                    </div>
+                    <div class="input-contact">
+                        <input type="tel" placeholder="Número de telémovel" id="tlm" required
+                        onchange="validarTlm();">*
+                    </div>
+                </div>
+                <div class="input-contactrow">
+                    <div class="label">
+                        Email:
+                    </div>
+                    <div class="input-contact">
+                        <input type="email" placeholder="Email para o contacto" id="email" required
+                        onchange="validarEmail();">*
+                    </div>
+                </div>
+                <div class="input-contactrow">
+                    <div class="label">
+                        Data:
+                    </div>
+                    <div class="input-contact">
+                        <input type="date" id="data" required>*
+                    </div>
+                </div>
+                <div class="input-contactrow">
+                    <div class="label">
+                        Motivo para o contacto:
+                    </div>
+                    <div class="input-contact">
+                        <textarea name="motivo" title="Minimo 5 caractéres" id="motivo" cols="30" rows="10"
+                        placeholder="Especifique a intenção do seu contacto" onchange="validarMotivo();"></textarea>*
+                    </div>
+                </div>
+                <div class="input-contactrow">
+                    <button id="submit-contact" type="submit" onclick="btnSubmit();">Enviar</button>
+                </div>
+                </form>
+            </div>            
+        </div>
+
+<!-- Mapa -->
+<div class="col-md-6 mapa">
+  <div class="map-container">
+    <h2 id="visit">Faça-nos uma visita... </h2>
+    <div id="map" style="width: 100%;">
+      <iframe
+        width="100%"
+        height="350"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-9.421540796756746%2C38.69567186551607%2C-9.418000280857088%2C38.69756846453178&amp;layer=mapnik" style="border: 1px solid black"
+      ></iframe>
+      <br />
+    </div>
+    <br />
+    <div id="map">
+      <button id="btn-como-chegar">Como chegar</button>
+    </div>
+  </div>
+</div>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid bg-dark-color" id="footer">
+      <div class="container">
+        <div class="row">
+          <!-- FOOTER TOP -->
+          <div class="col-12" id="footer-top">
+            <div class="row justify-content-between">
+              <div class="col-4">
+                <h2>AgenciaX</h2>
+              </div>
+               <div class="col-4" id="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+                <a href="https://twitter.com/home" target="_blank"><i class="bi bi-twitter-x"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- FOOTER DETAILS -->
+          <div class="col-12" id="footer-details">
+            <div class="row">
+              <div class="col-12 col-md-4" id="news-container">
+                <h4>Fique por dentro das novidades</h4>
+                <p class="secondary-color">
+                  Inscreva-se para receber as novidades
+                </p>
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Digite o seu e-mail"
+                    />
+                  </div>
+                  <button class="btn btn-dark">Inscrever</button>
+                </form>
+              </div>
+              <div class="col-12 col-md-4" id="contact-container">
+                <h4>Formas de contacto</h4>
+                <p class="secondary-color">999-999-999</p>
+                <p class="secondary-color">contato@agenciax.com</p>
+              </div>
+              <div class="col-12 col-md-4" id="links-container">
+                <div class="row">
+                  <h4>Você pode estar buscando por:</h4>
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="secondary-color">Projetos</a></li>
+                      <li><a href="#" class="secondary-color">Designer</a></li>
+                      <li><a href="#" class="secondary-color">Atualizações</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="secondary-color">Contratar</a></li>
+                      <li>
+                        <a href="#" class="secondary-color">Trabalhe na AgenciaX</a>
+                      </li>
+                      <li><a href="#" class="secondary-color">Feedback</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FOOTER BOTTOM -->
+          <div class="col-12" id="footer-bottom">
+            <div class="row justify-content-between">
+              <div class="col-12 col-md-3">
+                <p class="secondary-color">AgenciaX &copy; 2024</p>
+              </div>
+              <div class="col-12 col-md-3">
+                <p class="secondary-color">
+                  Realizamos o seu projeto com
+                  <i class="bi bi-heart"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

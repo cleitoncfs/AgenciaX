@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgenciaX</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Google fonts Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" defer></script>
+    <!-- JavaScript Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Javascript do projeto -->
+    <script src="js/scripts.js" defer></script>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+      <div class="container py-3">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/agenciax-icon.png" alt="AgenciaX">
+          <span>AgenciaX</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-items"
+          aria-controls="navbar-items"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-items">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfólio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <form class="d-flex" id="search-form">
+              <i class="bi bi-search primary-color"></i>
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Encontre no site..."
+                aria-label="Search"
+              />
+              <button
+                class="btn secondary-bg-color"
+                id="btn-search"
+                type="submit"
+              >
+                Pesquisar
+              </button>
+            </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- SLIDER -->
+    <div class="container" id="slider-container">
+      <div id="slider" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#slider"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#slider"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#slider"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/banner-1.jpg" class="d-block w-100" alt="banner 1">
+            <div class="carousel-caption">
+              <h5>AgenciaX</h5>
+              <h6>Excelência em Desenvolvimento de Projetos</h6>
+              <a href="#featured-container" class="btn btn-dark"
+                >Fazer Orçamento</a
+              >
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner-2.jpg" class="d-block w-100" alt="Banner 2">
+            <div class="carousel-caption">
+              <h5>AgenciaX</h5>
+              <h6>Excelência em Desenvolvimento de Projetos</h6>
+              <a href="#featured-container" class="btn btn-dark"
+                >Fazer Orçamento</a
+              >
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner-3.jpg" class="d-block w-100" alt="Banner 3">
+            <div class="carousel-caption">
+              <h5>AgenciaX</h5>
+              <h6>Excelência em Desenvolvimento de Projetos</h6>
+              <a href="#featured-container" class="btn btn-dark"
+                >Fazer Orçamento</a
+              >
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#slider"
+          data-bs-slide="prev"
+        >
+          <i class="bi bi-chevron-compact-left"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#slider"
+          data-bs-slide="next"
+        >
+          <i class="bi bi-chevron-compact-right"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="col-12 col-md-10 offset-md-1" id="mini-banners">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="card text-center">
+              <i class="bi bi-box primary-color"></i>
+              <div class="card-body">
+                <h5 class="card-title primary-color">
+                  Gerenciamento de Projetos
+                </h5>
+                <p class="card-text secondary-color">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <a href="portfolio.html" class="btn btn-dark">Saber Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card text-center">
+              <i class="bi bi-layers primary-color"></i>
+              <div class="card-body">
+                <h5 class="card-title primary-color">Desenvolvimento</h5>
+                <p class="card-text secondary-color">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <a href="portfolio.html" class="btn btn-dark">Saber Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card text-center">
+              <i class="bi bi-lightning-charge"></i>
+              <div class="card-body primary-color">
+                <h5 class="card-title primary-color">Design UX/UI</h5>
+                <p class="card-text secondary-color">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <a href="portfolio.html" class="btn btn-dark">Saber Mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="content-container">
+      <div class="row">
+        <!-- Coluna para as notícias -->
+        <div class="col-md-6">
+          <div class="col-12">
+            <h2 class="title primary-color">Principais notícias do dia:</h2>
+            <p class="subtitle secondary-color">Fique por dentro:</p>
+          </div>
+          <div id="news">
+            <!-- As notícias serão carregadas aqui -->
+          </div>
+        </div>
+
+        <!-- ORÇAMENTO-->
+        <div class="col-md-6">
+          <!-- Coluna para o formulário de orçamento -->
+          <div class="container" id="featured-container">
+            <div class="col-12">
+              <h2 class="title primary-color">Realize um Orçamento...</h2>
+              <p class="subtitle secondary-color">Personalise o seu pedido:</p>
+            </div>
+
+            <div class="budget">
+              <form id="orcamentoForm">
+                <label for="tipoPagina">Tipo de Página:</label>
+                <select id="tipoPagina" name="tipoPagina">
+                  <option value="opcao1">Landing Page - 1000 €</option>
+                  <option value="opcao2">Site Institucional - 1500 €</option>
+                  <option value="opcao3">Loja Virtual - 2000 €</option>
+                  <option value="opcao4">Blog - 1000 €</option>
+                </select>
+
+                <label for="prazoMeses">Prazo em Meses:</label>
+                <input
+                  type="number"
+                  id="prazoMeses"
+                  name="prazoMeses"
+                  min="1"
+                  max="20"
+                />
+                <p id="descontoPercentual"></p>
+
+                <label for="separadores">Separadores Desejados:</label>
+                <input
+                  type="checkbox"
+                  id="separador1"
+                  name="separadores"
+                  value="150"
+                />
+                Quem somos (+150 €)
+                <input
+                  type="checkbox"
+                  id="separador2"
+                  name="separadores"
+                  value="300"
+                />
+                Onde estamos (+300 €)
+                <input
+                  type="checkbox"
+                  id="separador2"
+                  name="separadores"
+                  value="250"
+                />
+                Galeria de fotos (+250 €)
+                <input
+                  type="checkbox"
+                  id="separador2"
+                  name="separadores"
+                  value="400"
+                />
+                e-Comerce (+400 €)
+                <input
+                  type="checkbox"
+                  id="separador2"
+                  name="separadores"
+                  value="500"
+                />
+                Gestão interna (+500 €)
+                <input
+                  type="checkbox"
+                  id="separador2"
+                  name="separadores"
+                  value="300"
+                />
+                Notícias (+300 €)
+                <input
+                  type="checkbox"
+                  id="separador2"
+                  name="separadores"
+                  value="200"
+                />
+                Redes social-midias (+200 €)
+
+                <label for="orcamentoFinal">Orçamento Final:</label>
+                <span id="orcamentoFinal">0 €</span>
+
+                <button type="submit">Enviar Pedido</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid bg-dark-color" id="footer">
+      <div class="container">
+        <div class="row">
+          <!-- FOOTER TOP -->
+          <div class="col-12" id="footer-top">
+            <div class="row justify-content-between">
+              <div class="col-4">
+                <h2>AgenciaX</h2>
+              </div>
+              <div class="col-4" id="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="https://www.instagram.com/" target="_blank"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="https://www.youtube.com/" target="_blank"
+                  ><i class="bi bi-youtube"></i
+                ></a>
+                <a href="https://twitter.com/home" target="_blank"
+                  ><i class="bi bi-twitter-x"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- FOOTER DETAILS -->
+          <div class="col-12" id="footer-details">
+            <div class="row">
+              <div class="col-12 col-md-4" id="news-container">
+                <h4>Fique por dentro das novidades</h4>
+                <p class="secondary-color">
+                  Inscreva-se para receber as novidades
+                </p>
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Digite o seu e-mail"
+                    />
+                  </div>
+                  <button class="btn btn-dark">Inscrever</button>
+                </form>
+              </div>
+              <div class="col-12 col-md-4" id="contact-container">
+                <h4>Formas de contacto</h4>
+                <p class="secondary-color">999-999-999</p>
+                <p class="secondary-color">contato@agenciax.com</p>
+              </div>
+              <div class="col-12 col-md-4" id="links-container">
+                <div class="row">
+                  <h4>Você pode estar buscando por:</h4>
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="secondary-color">Projetos</a></li>
+                      <li><a href="#" class="secondary-color">Designer</a></li>
+                      <li>
+                        <a href="#" class="secondary-color">Atualizações</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li><a href="#" class="secondary-color">Contratar</a></li>
+                      <li>
+                        <a href="#" class="secondary-color"
+                          >Trabalhe na AgenciaX</a
+                        >
+                      </li>
+                      <li><a href="#" class="secondary-color">Feedback</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FOOTER BOTTOM -->
+          <div class="col-12" id="footer-bottom">
+            <div class="row justify-content-between">
+              <div class="col-12 col-md-3">
+                <p class="secondary-color">AgenciaX &copy; 2024</p>
+              </div>
+              <div class="col-12 col-md-3">
+                <p class="secondary-color">
+                  Realizamos o seu projeto com
+                  <i class="bi bi-heart"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
