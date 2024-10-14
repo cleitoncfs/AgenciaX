@@ -421,6 +421,37 @@ h1 {
   }
 }
 
+/* Estilos gerais */
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+  .carousel-caption {
+    bottom: 10px; /* Ajuste a posição vertical se necessário */
+  }
+
+  .carousel-caption h5 {
+    font-size: 24px; /* Ajuste para um tamanho de fonte maior se necessário */
+    margin-bottom: 5px; /* Aumenta o espaçamento abaixo do título */
+  }
+
+  .carousel-caption h6 {
+    font-size: 18px; /* Ajuste o subtítulo */
+    margin-bottom: 10px; /* Aumenta o espaçamento abaixo do subtítulo */
+  }
+
+  .carousel-caption a {
+    padding: 10px 20px; /* Ajusta o tamanho do botão */
+    font-size: 16px; /* Aumenta o tamanho da fonte do botão */
+  }
+}
+
 /* CSS para tornar a galeria responsiva */
 .gallery-item {
   width: 25%; /* Define a largura inicial das imagens na galeria */
@@ -638,5 +669,78 @@ h1 {
 
   #links-container {
     padding-left: 2em;
+  }
+}
+
+/* SLIDER */
+#slider {
+  margin-top: 0; /* Remover o margin-top do slider */
+  margin-bottom: 1em;
+  padding-top: 20px; /* Adicione um pequeno padding-top, se necessário */
+}
+
+#slider .carousel-caption {
+  bottom: 20px; /* Ajustar a posição vertical do texto */
+  text-align: center;
+}
+
+#slider .carousel-caption h5 {
+  font-size: 4em; /* Tamanho da fonte para dispositivos maiores */
+  text-shadow: #050505 2px 2px;
+  color: #fff;
+  margin-bottom: 0.5em; /* Espaçamento entre título e subtítulo */
+}
+
+.carousel-caption h6 {
+  font-size: 1.5em; /* Tamanho do subtítulo */
+  text-shadow: #fff 1px 1px;
+  color: #fff;
+}
+
+
+/* SLIDER */
+#slider {
+  margin-top: 20px; /* Adiciona espaço acima do carrossel */
+  margin-bottom: 1em;
+  padding-top: 20px; /* Manter um padding superior */
+}
+
+#slider .carousel-caption {
+  bottom: 20px; /* Posição do texto na parte inferior */
+  text-align: center;
+}
+
+#slider .carousel-caption h5 {
+  font-size: 4em; /* Tamanho da fonte para dispositivos maiores */
+  text-shadow: #050505 2px 2px;
+  color: #fff;
+  margin-bottom: 0.5em; /* Espaçamento entre título e subtítulo */
+}
+
+.carousel-caption h6 {
+  font-size: 1.5em; /* Tamanho do subtítulo */
+  text-shadow: #fff 1px 1px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #slider {
+    margin-top: 130px; /* Adiciona mais espaço no topo em telas menores */
+    padding-top: 20px; /* Manter um padding superior */
+  }
+
+  #slider .carousel-caption {
+    bottom: 1px; /* Ajuste a posição vertical se necessário */
+  }
+
+  #slider .carousel-caption h5 {
+    font-size: 30px; /* Tamanho do título */
+    margin-bottom: 5px; /* Aumenta o espaçamento abaixo do título */
+  }
+
+  #slider .carousel-caption h6 {
+    font-size: 18px; /* Ajuste o subtítulo */
+    margin-bottom: 10px; /* Aumenta o espaçamento abaixo do subtítulo */
+    color:#222
   }
 }
